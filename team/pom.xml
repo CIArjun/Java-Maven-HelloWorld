@@ -29,14 +29,14 @@
       <inherited>false</inherited>
       <executions>
         <execution>
-        <phase>verify</phase>
+          <phase>verify</phase> 
           <id>snyk-test</id>
           <goals>
             <goal>test</goal>
           </goals>
         </execution>
         <execution>
-        <phase>none</phase>
+          <phase>none</phase> 
           <id>snyk-monitor</id>
           <goals>
             <goal>monitor</goal>
@@ -44,7 +44,7 @@
         </execution>
       </executions>
       <configuration>
-        <apiToken>${SNYK_TOKEN}</apiToken>
+        <apiToken>${env.SNYK_TOKEN}</apiToken>
         <args>
           <arg>--all-projects</arg>
         </args>
